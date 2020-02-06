@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main(void) {
 	printf("Enter character:");
 
@@ -7,7 +6,7 @@ int main(void) {
 	int index;							//输入字母在26个字母中的序号
 	int row, blank, lineUp, lineDown;
 
-	while (scanf_s("%c", &input, sizeof(input) == 1)) {
+	while (scanf_s("%c", &input,sizeof(input))) {
 		index = input - tempA + 1;
 		for (row = 1; row <= index; row++) {
 			for (blank = 0; blank < index - row; blank++)	//index和空格数、行数存在线性关系 index-row=blank
@@ -20,7 +19,7 @@ int main(void) {
 				printf("%c", tempA - 1 + lineUp - 1 - lineDown);//使用升序的最后一个字符来控制输出字符。注意！这里的lineUp是已经自动+1的，所以需要把1减去，tempA - 1 + lineUp - 1才是升序的最后一个字符
 			printf("\n");
 		}
-		printf("Enter character:");
+		printf("Enter character:");			//这里在控制台会连续输出两次，跳过一次scanf函数的输入检测，目前知识所限原因未知
 	}
 
 	return 0;
