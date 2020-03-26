@@ -6,9 +6,9 @@ int main(void) {
 	int ch = 0;
 
 	while ((ch = getchar()) != EOF) {
-		if (islower((char)ch))
+		if (islower(ch))
 			lowerCount++;
-		if (isupper((char)ch))
+		if (isupper(ch))
 			upperCount++;
 	}
 	printf("Num of upper: %d , Num of lower: %d .", upperCount, lowerCount);

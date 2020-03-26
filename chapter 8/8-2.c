@@ -12,7 +12,7 @@ int main(void) {
 		else if ((char)ch == '\t') {
 			printf("tab:\\t\t");
 		}
-		else if (isprint((char)ch) == 0) {
+		else if (iscntrl((char)ch)) {
 			printf("Seq:^%c\t", ch + 'A' - 1);	//这里留个坑，目前不会在命令行输入控制字符，也可能是我没读懂题，勉强做了。
 		}
 		else {
