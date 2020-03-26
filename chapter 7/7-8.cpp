@@ -58,10 +58,11 @@ int main(void) {
 		printf("5) quit\n");
 		printf("*****************************************************************\n");
 	}
-	quit: printf("Done!");
+quit: printf("Done!");
 
 	return 0;
 }
+
 void calculate(double BASE_WAGE) {
 	printf("u choose $%.2lf/hr\n", BASE_WAGE);
 
