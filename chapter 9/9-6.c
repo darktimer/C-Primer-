@@ -18,8 +18,11 @@ int main(void) {
 	while (scanf_s("%lf %lf %lf", &temp1, &temp2, &temp3) == 3) {
 		/*
 		printf("min: %.2lf, middle: %.2lf, max: %.2lf\n", getMin(&temp1, &temp2, &temp3), temp2, temp3);
-		第一版是一步到位的写法，但是在 getMin 函数中， temp2 和 temp3 的值在 getMin 执行后已经是新值，但在 printf 中还是之前的值，导致结果一直不正确
+		第一版是一步到位的写法，但是在 getMin 函数中，虽然 temp2 和 temp3 的值在 getMin 执行后已经是新值，
+		但在 printf 中还是之前的值，导致结果一直不正确
 		可能是跟第八章的 8-8 那个函数传参数是从右到左的顺序有关
+		我的个脑子.....
+		调试明明值都更新了呀，一打印就错....
 		我的个脑子.....
 		*/
 		min = getMin(&temp1, &temp2, &temp3);
