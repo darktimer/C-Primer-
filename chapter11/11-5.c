@@ -16,7 +16,8 @@ int main(void) {
 		}
 		else {
 			printf("NULL return, not Found!\n");
-		}
+		}											//这里不需要清除输入缓存是因为 %s 只读取空白以外的字符
+													//所以上次输入的 \n 不会读入下次输入的字符串，占位符直接跳过空白
 		printf("Enter str & target character separate by one space:");
 	}
 	return 0;
