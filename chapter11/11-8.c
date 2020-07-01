@@ -61,8 +61,8 @@ char* string_in(char* str2, char* str1) {
 		else {
 			i2++;
 		}
-		if (i1 == ct1)
-			return str2 + i2 - i1;
+		if (i1 == ct1)		//当第 1 个字符串的计数值等于其长度时，意味着第 2 个字符串中包含第 1 个字符串
+			return str2 + i2 - i1;		//返回第 2 个字符串中第 1 个字符串开始的地址
 		else if (i2 == ct2 && i1 != ct1)	//其实 && i1 != ct1 这个条件不用写，能来这个分支就表示这个意思了。
 			return  NULL;
 	}
